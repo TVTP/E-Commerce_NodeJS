@@ -8,6 +8,8 @@ const PORT = process.env.PORT || 4000;
 const authRouter=require('./routes/authRoute');
 const productRouter=require('./routes/productRoute');
 const categoryRouter=require('./routes/categoryRoute');
+const blogRouter=require('./routes/blogRoute');
+const brandRouter=require('./routes/brandRoute');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const morgan = require('morgan');
@@ -32,6 +34,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use("/api/user", authRouter);
 app.use("/api/product", productRouter);
 app.use("/api/category", categoryRouter);
+app.use("/api/blog", blogRouter);
+app.use("/api/brand", brandRouter);
 
 app.use(notFound);
 app.use(errorHandler);
