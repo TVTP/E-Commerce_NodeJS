@@ -9,6 +9,7 @@ const authRouter=require('./routes/authRoute');
 const productRouter=require('./routes/productRoute');
 const categoryRouter=require('./routes/categoryRoute');
 const blogRouter=require('./routes/blogRoute');
+const blogCatRouter=require('./routes/blogCatRoute');
 const brandRouter=require('./routes/brandRoute');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
@@ -35,6 +36,7 @@ app.use("/api/user", authRouter);
 app.use("/api/product", productRouter);
 app.use("/api/category", categoryRouter);
 app.use("/api/blog", blogRouter);
+app.use("/api/blogcategory", blogCatRouter);
 app.use("/api/brand", brandRouter);
 
 app.use(notFound);
