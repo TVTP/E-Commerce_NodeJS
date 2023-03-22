@@ -11,6 +11,7 @@ const categoryRouter=require('./routes/categoryRoute');
 const blogRouter=require('./routes/blogRoute');
 const blogCatRouter=require('./routes/blogCatRoute');
 const brandRouter=require('./routes/brandRoute');
+const voucherRouter=require('./routes/voucherRoute');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const morgan = require('morgan');
@@ -38,6 +39,8 @@ app.use("/api/category", categoryRouter);
 app.use("/api/blog", blogRouter);
 app.use("/api/blogcategory", blogCatRouter);
 app.use("/api/brand", brandRouter);
+app.use("/api/voucher", voucherRouter);
+
 
 app.use(notFound);
 app.use(errorHandler);
